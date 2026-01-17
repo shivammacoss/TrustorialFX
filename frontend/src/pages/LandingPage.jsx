@@ -147,7 +147,7 @@ const CryptoPromo = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-[60px] relative z-10">
         <div className="max-w-[480px]">
           <div className="mb-8 flex items-center gap-2">
-            <span className="text-white text-[24px] font-medium">NalmiFX Crypto</span>
+            <span className="text-white text-[24px] font-medium">TrustorialFX Crypto</span>
           </div>
           <h1 className="text-white text-[48px] md:text-[64px] mb-6 leading-[1.1] tracking-[-0.02em] font-light">
             Get more crypto for your money

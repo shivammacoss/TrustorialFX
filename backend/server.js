@@ -240,7 +240,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')))
 
 // Health check
 app.get('/', (req, res) => {
-  res.json({ message: 'NalmiFX API is running' })
+  res.json({ message: 'TrustorialFX API is running' })
 })
 
 const PORT = process.env.PORT || 5000
