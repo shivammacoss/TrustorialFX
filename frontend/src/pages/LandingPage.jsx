@@ -48,18 +48,18 @@ const Navigation = () => {
             <span className="hidden sm:inline">EN</span>
             <ChevronDown size={14} className="hidden sm:inline" />
           </button>
-          <button
-            onClick={() => navigate('/user/login')}
+          <a
+            href="https://trade.trustoriafx.com/user/login"
             className="text-white hover:text-[#CFF12F] transition-colors text-[16px] font-medium hidden sm:block"
           >
             Log in
-          </button>
-          <button
-            onClick={() => navigate('/user/signup')}
+          </a>
+          <a
+            href="https://trade.trustoriafx.com/user/signup"
             className="bg-[#CFF12F] text-black px-[20px] py-[10px] rounded-[24px] text-[16px] font-bold hover:brightness-110 transition-all whitespace-nowrap"
           >
             Sign up
-          </button>
+          </a>
         </div>
       </div>
     </nav>
@@ -227,12 +227,12 @@ const SecurityTrust = () => {
           <h2 className="text-white text-[48px] md:text-[64px] lg:text-[72px] leading-[1.05] tracking-[-0.03em] max-w-[900px] mx-auto mb-[40px]">
             Industry-leading security. Trusted by over 26 million users.
           </h2>
-          <button
-            onClick={() => navigate('/user/signup')}
+          <a
+            href="https://trade.trustoriafx.com/user/signup"
             className="inline-flex items-center justify-center bg-[#CFF12F] text-black text-[16px] font-medium px-[28px] py-[14px] rounded-[32px] hover:opacity-90 transition-opacity duration-200"
           >
             Get started
-          </button>
+          </a>
           <div className="h-[100px] md:h-[140px]" />
         </div>
       </div>
