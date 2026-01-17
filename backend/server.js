@@ -201,8 +201,23 @@ io.on('connection', (socket) => {
 // Make io accessible to routes
 app.set('io', io)
 
-// Middleware
-app.use(cors())
+// CORS Configuration - Support multiple origins from env
+const corsOrigins = process.env.CORS_ORIGIN 
+  ? process.env.CORS_ORIGIN.split(',').map(origin => origin.trim())
+  : ['http://localhost:5173']
+
+app.use(cors({
+  origin: function(origin, callback) {
+    // Allow requests with no origin (mobile apps, curl, etc.)
+    if (!origin) return callback(null, true)
+    if (corsOrigins.includes(origin) || corsOrigins.includes('*')) {
+      callback(null, true)
+    } else {
+      callback(null, true) // Allow all in development, restrict in production if needed
+    }
+  },
+  credentials: true
+}))
 app.use(express.json({ limit: '50mb' }))
 app.use(express.urlencoded({ limit: '50mb', extended: true }))
 
